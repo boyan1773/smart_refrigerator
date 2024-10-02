@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from .models import AppUser,Manufacturer,Picture,Stock,Temperature,WebUser
-from .serializers import AppUserSerializer,ManufacturerSerializer,PictureSerializer,TemperatureSerializer,WebUserSerializer
+from .serializers import AppUserSerializer,ManufacturerSerializer,PictureSerializer,StockSerializer,TemperatureSerializer,WebUserSerializer
 
 class AppUser(viewsets.ModelViewSet):
     queryset = AppUser.objects.all()
@@ -16,7 +16,7 @@ class picture(viewsets.ModelViewSet):
 
 class stock(viewsets.ModelViewSet):
     queryset = Stock.objects.all()
-    serializer_class = PictureSerializer
+    serializer_class = StockSerializer
 
 class temperature(viewsets.ModelViewSet):
     queryset = Temperature.objects.all()
